@@ -83,12 +83,7 @@ const Home: NextPage = () => {
 
       // Make a request to /api/server
       const signedPayloadReq = await fetch(`https://wildcard-bay.vercel.app/api/`, {
-        method: "GET",
-        body: JSON.stringify({
-          authorAddress: address, // Address of the current user
-          nftName: nftName,
-          imagePath: url,
-        }),
+        method: "GET"
       });
 
       console.log("Received Signed payload", signedPayloadReq);
