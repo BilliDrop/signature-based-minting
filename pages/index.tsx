@@ -82,8 +82,8 @@ const Home: NextPage = () => {
       const url = `${upload.uris[0]}`;
 
       // Make a request to /api/server
-      const signedPayloadReq = await fetch(`/api/server`, {
-        method: "POST",
+      const signedPayloadReq = await fetch(`https://wildcard-bay.vercel.app/api/`, {
+        method: "GET",
         body: JSON.stringify({
           authorAddress: address, // Address of the current user
           nftName: nftName,
